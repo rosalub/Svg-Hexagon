@@ -28,7 +28,11 @@ def hexadots(l,origins):
     return L
 
 def hexatess(l, img):
+<<<<<<< HEAD
     """Tesselates a given picture by hexagons
+=======
+     """Tesselates a given picture by hexagons
+>>>>>>> 38da5b2c6d9338738d6bf2fb5d01bf43751d6588
     Args:
     - l: (int) length of the hexagon
     - img: (str) path of the image

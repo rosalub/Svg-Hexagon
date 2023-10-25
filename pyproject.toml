@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "hexagon-shaping"
+version = "0.1.0"
+description = ""
+authors = ["Francois Roussel <francois.roussel2.etu@univ-lille.fr>"]
+readme = "README.md"
+packages = [{include = "hexagon_shaping"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pytest = "^7.3.2"
+coverage = "^7.3.2"
+pylint = "^3.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

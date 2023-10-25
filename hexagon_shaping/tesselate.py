@@ -28,9 +28,6 @@ def hexadots(l,origins):
     return L
 
 def hexatess(l, img):
-<<<<<<< HEAD
-    """Tesselates a given picture by hexagons
-=======
      """Tesselates a given picture by hexagons
     Args:
     - l: (int) length of the hexagon

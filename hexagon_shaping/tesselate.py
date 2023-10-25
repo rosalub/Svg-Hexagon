@@ -5,7 +5,7 @@ from PIL import Image, ImageDraw
 import numpy as np
 
 def hexadots(l,origins):
-    """Given an origin, defines the point to design a hexagon
+    """Given an origin, defines the point to design a hexagon.
     Args:
     - l: (int) length of the hexagon
     - origins: (list) list of x and y corresponding to the center of the hexagon
@@ -28,7 +28,11 @@ def hexadots(l,origins):
     return L
 
 def hexatess(l, img):
+<<<<<<< HEAD
     """Tesselates a given picture by hexagons
+=======
+     """Tesselates a given picture by hexagons
+>>>>>>> 78aeba7a9073574127e5bb2523643fb186f159ba
     Args:
     - l: (int) length of the hexagon
     - img: (str) path of the image

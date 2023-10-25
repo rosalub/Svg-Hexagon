@@ -32,7 +32,6 @@ def hexatess(l, img):
     """Tesselates a given picture by hexagons
 =======
      """Tesselates a given picture by hexagons
->>>>>>> 78aeba7a9073574127e5bb2523643fb186f159ba
     Args:
     - l: (int) length of the hexagon
     - img: (str) path of the image

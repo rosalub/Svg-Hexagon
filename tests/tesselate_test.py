@@ -1,6 +1,7 @@
 """Testing the tesselate.py functions"""
 
-from hexagon_shaping.tesselate import hexadots, hexatess
+from function.tesselate import hexadots, hexatess
+from function.hexagon_color import get_color 
 
 def test_hexadots():
     """Define the test function
@@ -12,6 +13,8 @@ def test_hexadots():
 
 def test_hexatess():
     with pytest.raises(ValueError):
-        hexatess("This is a string", "screenshot.jpg")
+        hexatess("This is a string", "../screenshot.jpg")
         hexatess(5, 10)
-        
+
+def test_get_color():
+    assert get_color('screenshot.jpg', [(10, 5), (15, 8), (15, 12), (10, 15), (5, 12), (5, 8), (10, 5)]) == [(24, 195, 239), (25, 193, 240), (25, 193, 242), (25, 193, 240), (24, 195, 241), (23, 196, 238), (24, 195, 239)]

@@ -46,7 +46,7 @@ def hexacoor(l, img):
         raise ValueError("Please put the path of the image")
 
     #Going throw all the origins given a length for every hexagon:
-    image = Image.open("screenshot.jpg")
+    image = Image.open(img)
     width, height = image.size
     xs = list()
     ys = list()

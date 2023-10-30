@@ -24,7 +24,6 @@ def coordinates_str(coordinates):
         coor.append(coordinates_str)
     return coor
 
-############################################### DRAFT 
 def hexa_svg(l, img):
     """
     Display the image in an hexagon svg.
@@ -32,18 +31,27 @@ def hexa_svg(l, img):
     - l: (int) length of the hexagons
     - img: (str) path of the image
     Returns:
-    - Void, display the image filled with hexagons
+    - Void, display an svg version of the image, 
+    made with haxagones
     """
-    # Keep the list of origines (for color)
-    # and the list of coordinates of the 6 points 
-    # of each haxagone :
     origins, coordinates = hexacoor(l, img)
+    
+    # Get the coordinates of hexagones which will build the image
+    hexa_coordinates = coordinates_str(coordinates)
 
     # Sample the color in the origins 
     colors = get_color(img, origins)
     
     # Creating the HTML file
     file_html = open("svg_hexagon.html", "w")
+
+    #creating the polygon part in the html writing 
+    polygons = ''
+    for i in range(len(colors)) : 
+        # this will create all the lines of the polygon tag needed to illustrate all the picture with
+        # our hexagones
+        polygons +=  f"<polygon points =  {hexa_coordinates[i]} \r stroke = 'none' \r fill = {'rgb' + str(colors[i])}  /> \r"
+
     # Adding the input data to the HTML file
     file_html.write('''<html>
         <head>
@@ -51,12 +59,12 @@ def hexa_svg(l, img):
         </head>
         <body>
             <svg height=l width=l
-                <polygon points="50 3,100 28,100 75,50 100,
-                3 75,3 25"
-                stroke="black"
-                fill="yellow" stroke-width="5" />
+                    {polygons}
             </svg>
         </body>
     </html>''')
     # Saving the data into the HTML file
     file_html.close()
+
+# remove the hashtag to see an example when you run the file
+#hexa_svg(10, 'screenshot.jpg')

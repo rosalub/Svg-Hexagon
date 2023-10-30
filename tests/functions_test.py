@@ -1,7 +1,7 @@
-"""Testing the tesselate.py functions"""
+"""Testing the python files in functions folder"""
 
-from function.tesselate import hexadots, hexatess
-from function.hexagon_color import get_color 
+from functions.tesselate import hexadots, hexatess
+from functions.hexagon_color import get_color 
 
 def test_hexadots():
     """Define the test function

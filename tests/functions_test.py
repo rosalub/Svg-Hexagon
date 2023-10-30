@@ -13,7 +13,7 @@ def test_hexadots():
 
 def test_hexatess():
     with pytest.raises(ValueError):
-        hexatess("This is a string", "../screenshot.jpg")
+        hexatess("This is a string", "screenshot.jpg")
         hexatess(5, 10)
 
 def test_get_color():

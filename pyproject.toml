@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "hexagon-shaping"
+name = "functions"
 version = "0.1.0"
 description = ""
-authors = ["Francois Roussel <francois.roussel2.etu@univ-lille.fr>"]
+authors = ["Francois Roussel <francois.roussel2.etu@univ-lille.fr>, Rosalie Dauchez <rosalie.dauchez.etu@univ-lille.fr"]
 readme = "README.md"
-packages = [{include = "hexagon_shaping"}]
+packages = [{include = "functions"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"

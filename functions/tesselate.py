@@ -35,8 +35,10 @@ def hexacoor(l, img):
     - l: (int) length of the hexagon
     - img: (str) path of the image
     Returns:
-    - coord : (list) List of lists for each hexagon,
-    tuples of coordinates for the points within"""
+    - origins : (list) coordinates of each hexagone's origins
+    - coord : (list) tuples of coordinates for the 
+            points within lists for each hexagone
+    """
 
     if type(l) is not int:
         raise ValueError("l must be an integer")
@@ -68,7 +70,7 @@ def hexacoor(l, img):
     # ------------------------------------------------------------
     #Deducing all the points that form a hexagon from our origins and draw them on the image:
     coord = hexadots(l,origins)
-    return coord
+    return origins, coord
 
 
 def hexatess(l, img):

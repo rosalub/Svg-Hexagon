@@ -27,14 +27,16 @@ def hexadots(l,origins):
         res = list()
     return L
 
-def hexatess(l, img):
-    """Tesselates a given picture by hexagons
+def hexacoor(l, img):
+    """
+    Return coordinates of each points of the 
+    hexagones of width l which will fill our image.
     Args:
     - l: (int) length of the hexagon
     - img: (str) path of the image
     Returns:
-    - Void, display the image filled with hexagons
-    """
+    - coord : (list) List of lists for each hexagon,
+    tuples of coordinates for the points within"""
 
     if type(l) is not int:
         raise ValueError("l must be an integer")
@@ -44,7 +46,6 @@ def hexatess(l, img):
     #Going throw all the origins given a length for every hexagon:
     image = Image.open("screenshot.jpg")
     width, height = image.size
-    l = 5
     xs = list()
     ys = list()
     k = 0
@@ -67,7 +68,19 @@ def hexatess(l, img):
     # ------------------------------------------------------------
     #Deducing all the points that form a hexagon from our origins and draw them on the image:
     coord = hexadots(l,origins)
+    return coord
 
+
+def hexatess(l, img):
+    """Tesselates a given picture by hexagons
+    Args:
+    - l: (int) length of the hexagon
+    - img: (str) path of the image
+    Returns:
+    - Void, display the image filled with hexagons
+    """
+
+    coord = hexacoor(l, img)
     with Image.open("screenshot.jpg") as im:
         draw = ImageDraw.Draw(im) 
         for i in coord:

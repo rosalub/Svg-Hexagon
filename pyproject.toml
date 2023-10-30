@@ -2,7 +2,8 @@
 name = "functions"
 version = "0.1.0"
 description = ""
-authors = ["Francois Roussel <francois.roussel2.etu@univ-lille.fr>, Rosalie Dauchez <rosalie.dauchez.etu@univ-lille.fr"]
+authors = ["Francois Roussel <francois.roussel2.etu@univ-lille.fr>", 
+          "Rosalie Dauchez <rosalie.dauchez.etu@univ-lille.fr"]
 readme = "README.md"
 packages = [{include = "functions"}]
 

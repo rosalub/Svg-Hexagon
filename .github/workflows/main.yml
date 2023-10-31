@@ -30,9 +30,9 @@ jobs:
         run: poetry install --no-interaction --no-root
       - name: Install project
         run: poetry install --no-interaction
-      - name: Install adn run PIL
+      - name: Install and run PIL
         run: |
-          poetry run pillow
+          poetry run Pillow
       - name: Install and run coverage
         run: |
           poetry run coverage run -m pytest

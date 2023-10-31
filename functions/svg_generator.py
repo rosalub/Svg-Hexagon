@@ -43,28 +43,28 @@ def hexa_svg(l, img):
     colors = get_color(img, origins)
     
     # Creating the HTML file
-    file_html = open("svg_hexagon.html", "w")
+    file_html = open("../svg_hexagon.html", "w")
 
     #creating the polygon part in the html writing 
     polygons = ''
     for i in range(len(colors)) : 
         # this will create all the lines of the polygon tag needed to illustrate all the picture with
         # our hexagones
-        polygons +=  f"<polygon points =  {hexa_coordinates[i]} \r stroke = 'none' \r fill = {'rgb' + str(colors[i])}  /> \r"
-
+        polygons +=  f'<polygon points="{hexa_coordinates[i]}" \r                fill="{"rgb" + str(colors[i])}"stroke-width="0"/>\n                '
     # Adding the input data to the HTML file
     file_html.write('''<html>
         <head>
             <title>SVG Hexagon </title>
         </head>
         <body>
-            <svg height=l width=l
-                    {polygons}
+            <svg height="1920" width="1080">
+                {polygons}
             </svg>
         </body>
-    </html>''')
+    </html>'''.format(polygons=polygons))
     # Saving the data into the HTML file
     file_html.close()
+    
+    
+hexa_svg(5, '../screenshot.jpg')
 
-# remove the hashtag to see an example when you run the file
-#hexa_svg(10, 'screenshot.jpg')

@@ -1,6 +1,5 @@
 """Testing the python files in functions folder"""
 
-from PIL import Image 
 from functions.tesselate import hexadots, hexacoor, hexatess
 from functions.hexagon_color import get_color 
 

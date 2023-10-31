@@ -2,7 +2,8 @@
 
 from PIL import Image
 from functions.tesselate import hexadots, hexacoor, hexatess
-from functions.hexagon_color import get_color 
+from functions.hexagon_color import get_color
+import pytest
 
 def test_hexadots():
     """Define the test function
